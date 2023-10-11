@@ -13,7 +13,7 @@ import java.util.Scanner;
 public class POSExample {
     public static void main(String[] args) {
         try {
-            File myObj = new File("C:\\Users\\cjdan\\OneDrive\\Documents\\testFile.txt");
+            File myObj = new File("C:\\Users\\cjdan\\OneDrive\\Documents\\testFile");
             Scanner myReader = new Scanner(myObj);
 
             String data = myReader.nextLine();
