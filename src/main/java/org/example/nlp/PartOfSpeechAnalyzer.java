@@ -22,6 +22,15 @@ public class PartOfSpeechAnalyzer {
 
             CoreDocument coreDocument = new CoreDocument(data);
 
+            StanfordCoreNLP stanfordCoreNLP = Pipeline.getPipeline();
+
+            stanfordCoreNLP.annotate(coreDocument);
+
+            List<CoreLabel> coreLabelList = coreDocument.tokens();
+
+
+
+
 
 
         } catch (
