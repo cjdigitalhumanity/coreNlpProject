@@ -10,8 +10,15 @@ import java.util.List;
 import java.util.Scanner;
 
     public class SentenceAnalyzer {
-        public static void main(String[] args){
+        public static void main(String[] args) {
 
+            try {
+                File myObj = new File("C:\\Users\\cjdan\\OneDrive\\Documents\\testFile.txt");
+                Scanner myReader = new Scanner(myObj);
+
+                String data = myReader.nextLine();
+
+                myReader.close();
 
                 StanfordCoreNLP stanfordCoreNLP = Pipeline.getPipeline();
                 String text = "This is a test for the sentences. Find Them all";
@@ -24,9 +31,13 @@ import java.util.Scanner;
 
                 int i = 0;
 
-                for(CoreSentence sentence : sentences) {
+                for (CoreSentence sentence : sentences) {
                     i += 1;
                     System.out.println("Sentence" + i + " " + ": " + sentence.toString());
                 }
+            } catch (FileNotFoundException e) {
+                System.out.println("An error occurred.");
+                e.printStackTrace();
+            }
         }
     }
