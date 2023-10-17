@@ -21,9 +21,8 @@ import java.util.Scanner;
                 myReader.close();
 
                 StanfordCoreNLP stanfordCoreNLP = Pipeline.getPipeline();
-                String text = "This is a test for the sentences. Find Them all";
 
-                CoreDocument coreDocument = new CoreDocument(text);
+                CoreDocument coreDocument = new CoreDocument(data);
 
                 stanfordCoreNLP.annotate(coreDocument);
 
