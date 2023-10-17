@@ -28,10 +28,10 @@ public class PartOfSpeechAnalyzer {
 
             List<CoreLabel> coreLabelList = coreDocument.tokens();
 
-
-
-
-
+            for(CoreLabel coreLabel : coreLabelList){
+                String pos = coreLabel.get(CoreAnnotations.PartOfSpeechAnnotation.class);
+                System.out.println(coreLabel.originalText() + "  " + pos);
+            }
 
         } catch (
                 FileNotFoundException e) {
