@@ -14,7 +14,7 @@ public class Pipeline {
 
         static {
             properties = new Properties();
-            properties.setProperty("annotaters", propertiesName);
+            properties.setProperty("annotators", propertiesName);
         }
         public static StanfordCoreNLP getPipeline(){
             if(stanfordCoreNLP == null){
