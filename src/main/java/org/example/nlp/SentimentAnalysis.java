@@ -25,7 +25,7 @@ public class SentimentAnalysis {
 
             Properties props = new Properties();
             // set the list of annotators to run
-            props.setProperty("annotators", "tokenize,ssplit,pos,lemma,ner,parse,sentiment");
+            props.setProperty("annotators", "tokenize,pos,parse,sentiment");
             // build pipeline
             StanfordCoreNLP stanfordCoreNLP = new StanfordCoreNLP(props);
 

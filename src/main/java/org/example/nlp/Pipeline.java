@@ -5,7 +5,7 @@ package org.example.nlp;
 
 public class Pipeline {
         private static Properties properties;
-        private static String propertiesName = "tokenize, ssplit, pos, lemma, sentiment";
+        private static String propertiesName = "tokenize, ssplit, pos, parse, lemma, sentiment";
         private static StanfordCoreNLP stanfordCoreNLP;
 
         private Pipeline(){
